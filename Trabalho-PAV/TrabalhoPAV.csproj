@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EB09B31-2F24-4934-82DC-C46AF58E7844}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TrabalhoPAV</RootNamespace>
+    <AssemblyName>TrabalhoPAV</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.29\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.29\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.29\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bancodadospavDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bancodadospavDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bancodadospavDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bancodadospavDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bancodadospavDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bancodadospavDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bancodadospavDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bancodadospavDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bancodadospavDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bancodadospavDataSet41.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bancodadospavDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bancodadospavDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bancodadospavDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bancodadospavDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controladores\ControladorCadastroCaixa.cs" />
+    <Compile Include="Controladores\ControladorCadastroCliente.cs" />
+    <Compile Include="Controladores\ControladorCadastroCompra.cs" />
+    <Compile Include="Controladores\ControladorCadastroFormaPagamento.cs" />
+    <Compile Include="Controladores\ControladorCadastroFormaPagamentoVenda.cs" />
+    <Compile Include="Controladores\ControladorCadastroFornecedor.cs" />
+    <Compile Include="Controladores\ControladorCadastroItemCompra.cs" />
+    <Compile Include="Controladores\ControladorCadastroItemVenda.cs" />
+    <Compile Include="Controladores\ControladorCadastroMovimentoCaixa.cs" />
+    <Compile Include="Controladores\ControladorCadastroProduto.cs" />
+    <Compile Include="Controladores\ControladorCadastroVenda.cs" />
+    <Compile Include="Controladores\OperacaoCadastro.cs" />
+    <Compile Include="Entidades\Caixa.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Compra.cs" />
+    <Compile Include="Entidades\Conta_Pagar.cs" />
+    <Compile Include="Entidades\Conta_Receber.cs" />
+    <Compile Include="Entidades\FormaPagamento.cs" />
+    <Compile Include="Entidades\FormaPagamentoVenda.cs" />
+    <Compile Include="Entidades\Fornecedor.cs" />
+    <Compile Include="Entidades\ItemCompra.cs" />
+    <Compile Include="Entidades\ItemVenda.cs" />
+    <Compile Include="Entidades\MovimentoCaixa.cs" />
+    <Compile Include="Entidades\Produto.cs" />
+    <Compile Include="Entidades\Venda.cs" />
+    <Compile Include="Execucao\VerificarCNPJCPF.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\GUI_CadastroFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\GUI_CadastroFornecedor.designer.cs">
+      <DependentUpon>GUI_CadastroFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\GUI_CadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\GUI_CadastroProduto.designer.cs">
+      <DependentUpon>GUI_CadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\GUI_CadastroVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\GUI_CadastroVenda.designer.cs">
+      <DependentUpon>GUI_CadastroVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\GUI_TabelaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\GUI_TabelaCliente.Designer.cs">
+      <DependentUpon>GUI_TabelaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\GUI_CadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\GUI_CadastroCliente.Designer.cs">
+      <DependentUpon>GUI_CadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\GUI_TabelaFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\GUI_TabelaFornecedor.designer.cs">
+      <DependentUpon>GUI_TabelaFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\GUI_TabelaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\GUI_TabelaProduto.designer.cs">
+      <DependentUpon>GUI_TabelaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\GUI_TabelaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\GUI_TabelaVenda.designer.cs">
+      <DependentUpon>GUI_TabelaVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistencia\BancoDados.cs" />
+    <Compile Include="Persistencia\ControladorCadastro.cs" />
+    <Compile Include="Persistencia\Entidade.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\GUI_CadastroCliente.resx">
+      <DependentUpon>GUI_CadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\GUI_CadastroFornecedor.resx">
+      <DependentUpon>GUI_CadastroFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\GUI_CadastroProduto.resx">
+      <DependentUpon>GUI_CadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\GUI_CadastroVenda.resx">
+      <DependentUpon>GUI_CadastroVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\GUI_TabelaCliente.resx">
+      <DependentUpon>GUI_TabelaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\GUI_TabelaFornecedor.resx">
+      <DependentUpon>GUI_TabelaFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\GUI_TabelaProduto.resx">
+      <DependentUpon>GUI_TabelaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\GUI_TabelaVenda.resx">
+      <DependentUpon>GUI_TabelaVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="bancodadospavDataSet1.xsc">
+      <DependentUpon>bancodadospavDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bancodadospavDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bancodadospavDataSet1.xss">
+      <DependentUpon>bancodadospavDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet11.xsc">
+      <DependentUpon>bancodadospavDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bancodadospavDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bancodadospavDataSet11.xss">
+      <DependentUpon>bancodadospavDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet2.xsc">
+      <DependentUpon>bancodadospavDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bancodadospavDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bancodadospavDataSet2.xss">
+      <DependentUpon>bancodadospavDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet3.xsc">
+      <DependentUpon>bancodadospavDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bancodadospavDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bancodadospavDataSet3.xss">
+      <DependentUpon>bancodadospavDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet41.xsc">
+      <DependentUpon>bancodadospavDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bancodadospavDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bancodadospavDataSet41.xss">
+      <DependentUpon>bancodadospavDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet5.xsc">
+      <DependentUpon>bancodadospavDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bancodadospavDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bancodadospavDataSet5.xss">
+      <DependentUpon>bancodadospavDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet6.xsc">
+      <DependentUpon>bancodadospavDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bancodadospavDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bancodadospavDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bancodadospavDataSet6.xss">
+      <DependentUpon>bancodadospavDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
